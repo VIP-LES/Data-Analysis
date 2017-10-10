@@ -66,6 +66,9 @@ if fileNum == 1
     error(errorMessage);
 end
 
+% Remove last datapoint to remove potentially incomplete data
+data(end,:) = [];
+
 time = data(:,1);
 
 accelX = data(:,2);
